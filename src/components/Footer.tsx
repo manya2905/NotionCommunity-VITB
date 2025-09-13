@@ -23,11 +23,11 @@ const Footer: React.FC = () => {
             <div className="space-y-6">
               <div>
                 <h4 className="font-medium mb-2">Events and Workshops</h4>
-                <p className="text-gray-600">Coming Soon!</p>
+                <p className="text-gray-600">Coming soon!</p>
               </div>
               <div>
                 <h4 className="font-medium mb-2">Recruitment</h4>
-                <p className="text-gray-600">Coming Soon!</p>
+                <p className="text-gray-600">Going on!</p>
               </div>
             </div>
           </div>
