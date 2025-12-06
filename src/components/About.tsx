@@ -2,11 +2,11 @@
 
 import type React from "react"
 import { useState } from "react"
-import JoinUsModal from "./JoinUsModal"
+//import JoinUsModal from "./JoinUsModal"// commented out to remove the popup(we are not hiring one)
 import { Link } from "react-router-dom"
 
 const About: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  //const [isModalOpen, setIsModalOpen] = useState(false)//modal disabled
   return (
     <section id="about" className="py-16 px-6 md:px-12 lg:px-24 bg-transparent">
       <div className="flex flex-col md:flex-row items-center">
@@ -23,13 +23,22 @@ const About: React.FC = () => {
             >
               View More
             </Link>
-            <button
+           {/* <button
               className="bg-black text-white px-6 py-3 text-base rounded-xl transform transition-all duration-300 hover:scale-110 hover:shadow-lg"
               onClick={() => setIsModalOpen(true)}
             >
               Join Us
-            </button>
-            <JoinUsModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+            </button> */}
+
+            <Link
+                  to="/join-us"
+                  className="bg-black text-white px-6 py-3 text-base rounded-xl transform transition-all duration-300 hover:scale-110 hover:shadow-lg"
+            >
+               Join Us
+            </Link>
+
+            
+          {/*  <JoinUsModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />*/}
           </div>
         </div>
         <div className="md:w-1/5 ml-auto">
