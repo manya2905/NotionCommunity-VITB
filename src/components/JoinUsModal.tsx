@@ -69,8 +69,9 @@ const JoinUsModal: React.FC<JoinUsModalProps> = ({ isOpen, onClose }) => {
               />
 
               <p className="text-center text-lg mb-8">
-                We're <span className="text-red-500 font-bold">not</span> hiring at the moment, but you can join our
-                WhatsApp community to stay updated!
+               {/*  We're <span className="text-red-500 font-bold">not</span> hiring at the moment, but you can join our
+                WhatsApp community to stay updated! */}
+                 Join our WhatsApp community to stay connected!
               </p>
 
               <div className="flex space-x-4 mt-4">
