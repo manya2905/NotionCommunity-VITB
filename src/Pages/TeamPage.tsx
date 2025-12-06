@@ -3,7 +3,9 @@
 import type React from "react";
 import { useState } from "react";
 import { Linkedin } from "lucide-react";
-import JoinUsModal from "../components/JoinUsModal";
+import { Link } from "react-router-dom";
+
+//import JoinUsModal from "../components/JoinUsModal";// pop up removed(We are not hiring)
 
 interface TeamMember {
   id: number;
@@ -21,7 +23,7 @@ interface TeamCategory {
 
 const TeamPage: React.FC = () => {
   const [activeTeam, setActiveTeam] = useState<string>("tech");
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  //const [isModalOpen, setIsModalOpen] = useState(false);
   const [loadingImages, setLoadingImages] = useState<Record<string, boolean>>(
     {}
   );
@@ -784,7 +786,7 @@ const TeamPage: React.FC = () => {
             you're interested in digital productivity, event planning, content
             creation, or community building, we'd love to have you!
           </p>
-          <button
+          {/*<button
             onClick={() => setIsModalOpen(true)}
             className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition"
           >
@@ -793,7 +795,14 @@ const TeamPage: React.FC = () => {
           <JoinUsModal
             isOpen={isModalOpen}
             onClose={() => setIsModalOpen(false)}
-          />
+          />*/}
+          <Link
+              to="/join-us"
+              className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition"
+            >
+               Apply to Join
+          </Link>
+
         </div>
       </div>
     </div>
